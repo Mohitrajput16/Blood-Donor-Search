@@ -1,4 +1,4 @@
-That's a great step. A well-written README is essential for any project on GitHub. It's the first thing people see and it tells them what your project is, how to use it, and how to contribute.
+<img width="1841" height="826" alt="Screenshot 2025-09-04 151403" src="https://github.com/user-attachments/assets/091b2f8d-a596-4e19-a62f-845a1eb18336" />That's a great step. A well-written README is essential for any project on GitHub. It's the first thing people see and it tells them what your project is, how to use it, and how to contribute.
 
 Here is a comprehensive README template for your blood donor search application. You can copy and paste this into a file named **`README.md`** in your project's root directory.
 
@@ -31,6 +31,9 @@ A full-stack web application designed to connect blood donors with people in nee
   * **MongoDB**: A NoSQL database for storing application data.
   * **Mongoose**: An object data modeling (ODM) library for MongoDB and Node.js.
   * **Bcrypt.js**: For secure password hashing.
+
+<img width="1841" height="826" alt="Screenshot 2025-09-04 151403" src="https://github.com/user-attachments/assets/03c45c98-ad69-491a-8e16-6a62d9771fbf" />
+
 
 ## 🚀 Getting Started
 
