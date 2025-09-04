@@ -1,12 +1,6 @@
-<img width="1841" height="826" alt="Screenshot 2025-09-04 151403" src="https://github.com/user-attachments/assets/091b2f8d-a596-4e19-a62f-845a1eb18336" />That's a great step. A well-written README is essential for any project on GitHub. It's the first thing people see and it tells them what your project is, how to use it, and how to contribute.
-
-Here is a comprehensive README template for your blood donor search application. You can copy and paste this into a file named **`README.md`** in your project's root directory.
-
------
-
 # 🩸 Blood Donor Search Web App
 
-A full-stack web application designed to connect blood donors with people in need. The app allows users to register as donors, search for available donors by blood group and location, and manage their profile.
+A full-stack web application designed to connect blood donors with people in need. The app allows users to register as donors, search for available donors by blood group and location.
 
 ## ✨ Features
 
