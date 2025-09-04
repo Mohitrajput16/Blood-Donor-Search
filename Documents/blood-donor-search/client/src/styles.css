@@ -1,0 +1,155 @@
+/* --- Modern CSS Variables for a Unified Theme --- */
+:root {
+  --primary-color: #e53935; /* A vibrant red, often associated with blood drives */
+  --primary-dark: #b71c1c;  /* A darker red for hover effects */
+  --text-color: #333;       /* A dark gray for body text */
+  --heading-color: #2c3e50; /* A darker shade for headings */
+  --background-color: #f8f9fa; /* A very light gray background */
+  --surface-color: #ffffff; /* Pure white for cards and elements */
+  --border-color: #e0e0e0;   /* A light gray border */
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+/* --- Global and Base Styles --- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background: var(--background-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  padding: 16px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* --- Navigation Bar Styling --- */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background-color: var(--surface-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px var(--shadow-color);
+  margin-bottom: 24px;
+}
+
+.nav h2 {
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.nav .links a, 
+.nav .links button {
+  margin-left: 20px;
+  text-decoration: none;
+  border: none;
+  background: transparent;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav .links a:hover, 
+.nav .links button:hover {
+  background-color: var(--primary-color);
+  color: var(--surface-color);
+}
+
+/* --- Card and Form Styling --- */
+.card {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  padding: 24px;
+  border-radius: 12px;
+  margin: 16px 0;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px var(--shadow-color);
+}
+
+.form, .filters {
+  display: grid;
+  gap: 20px;
+}
+
+.form h3 {
+  text-align: center;
+  color: var(--heading-color);
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(229, 57, 53, 0.2);
+}
+
+/* --- Button Styling --- */
+button.primary {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+button.primary:disabled {
+  background: #bdbdbd;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* --- Filter Layout --- */
+.filters {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  .filters, .row {
+    grid-template-columns: 1fr;
+  }
+}
