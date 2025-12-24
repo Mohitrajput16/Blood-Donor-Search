@@ -8,8 +8,16 @@ const donorRoutes = require('./routes/DonorRoutes');
 
 const app = express();
 
-// Middleware
-app.use(cors({ origin: ['http://localhost:5173', 'http://127.0.0.1:5173'], credentials: true }));
+const allowedOrigins = [
+  'https://blood-donor-search-75joqcvma-mohitrajput1694-3402s-projects.vercel.app'
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: false
+}));
+
 app.use(express.json());
 
 // Routes
