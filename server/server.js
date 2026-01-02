@@ -18,10 +18,8 @@ const allowedOrigins = [
 
 app.use(cors({
   origin: function (origin, callback) {
-    // allow server-to-server & browser tools
     if (!origin) return callback(null, true);
 
-    // allow Vercel preview + production
     if (
       allowedOrigins.includes(origin) ||
       origin.endsWith('.vercel.app')
@@ -36,9 +34,8 @@ app.use(cors({
   credentials: false
 }));
 
-// Explicit preflight handling
-app.options('/*', cors());
-
+// Explicit preflight handling — FIXED
+app.options(/.*/, cors());
 
 /* ========================= */
 
